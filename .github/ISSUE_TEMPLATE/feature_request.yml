@@ -1,0 +1,51 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for RackMind? Describe what you'd like and why it matters.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What would you like to see?
+      description: Describe the feature or improvement
+      placeholder: "It would be great if RackMind could..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: How would you use this? What problem does it solve?
+      placeholder: "I manage 10 containers and currently have to..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the app does this relate to?
+      options:
+        - AI chat / agent
+        - Dashboard / monitoring
+        - Terminal
+        - Alerts
+        - Knowledge base / RAG
+        - Server management
+        - Settings / configuration
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you tried any workarounds? Are there similar tools that do this well?
+    validations:
+      required: false

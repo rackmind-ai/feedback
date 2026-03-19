@@ -1,0 +1,74 @@
+name: Bug Report
+description: Something isn't working as expected
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Fill out the fields below so we can reproduce and fix it.
+
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: "Found in Settings (bottom of the page)"
+      placeholder: "0.1.0-beta.1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS (Apple Silicon)
+        - macOS (Intel)
+        - Windows
+        - Linux (AppImage)
+        - Linux (deb)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Server platform
+      description: What are you managing with RackMind?
+      options:
+        - Proxmox VE
+        - Bare Linux
+        - Docker
+        - Synology NAS
+        - Multiple / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly. What did you expect vs what actually happened?
+      placeholder: "I tried to create a container and got an error..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps to trigger the bug
+      placeholder: |
+        1. Open RackMind
+        2. Type "create an Ubuntu container"
+        3. Confirm the operation
+        4. See error message
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Paste any error messages, logs, or attach screenshots. Optional but very helpful.
+    validations:
+      required: false
